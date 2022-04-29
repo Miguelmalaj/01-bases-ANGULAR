@@ -1,22 +1,22 @@
-import { HereoComponent } from './heroes/heroe/heroe.component';
-import { ContadorComponent } from './contador/contador.component';
+import { ContadorModule } from './contador/contador.module';
+// import { ContadorComponent } from './contador/contador/contador.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListadoComponent } from './heroes/listado/listado.component';
+import { HeroesModule } from './heroes/heroes.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContadorComponent,
-    HereoComponent,
-    ListadoComponent
+    // ContadorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HeroesModule,
+    ContadorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

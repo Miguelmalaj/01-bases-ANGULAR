@@ -6,10 +6,14 @@
     </li>
 </ul>
 
-<div>
-    <h3>Héroe borrado</h3>
+<div *ngIf="nombreBorrado; else noBorrado">
+    <h3>Héroe borrado<small>{{nombreBorrado}}</small></h3>
     <span>{{nombreBorrado}}</span>
 </div>
+
+<ng-template #noBorrado>
+    <h3>No ha borrado nada.</h3>
+</ng-template>
 
 <button (click)="borrarHeroe()">
     Borrar
